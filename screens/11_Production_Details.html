@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6-72,400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#261900",
+                        "primary-fixed": "#ffdea5",
+                        "tertiary-container": "#9fa4bc",
+                        "on-background": "#d4e4fa",
+                        "inverse-surface": "#d4e4fa",
+                        "outline": "#9a8f80",
+                        "background": "#051424",
+                        "surface-container-lowest": "#010f1f",
+                        "on-secondary-fixed": "#0d1c32",
+                        "on-surface": "#d4e4fa",
+                        "error": "#ffb4ab",
+                        "on-primary": "#412d00",
+                        "on-tertiary": "#2a3043",
+                        "on-error": "#690005",
+                        "secondary-container": "#3c4962",
+                        "inverse-primary": "#775a19",
+                        "on-tertiary-fixed-variant": "#40465a",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#abb9d6",
+                        "inverse-on-surface": "#233143",
+                        "tertiary": "#c0c6de",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#151b2d",
+                        "secondary": "#b9c7e4",
+                        "on-primary-container": "#4e3700",
+                        "on-secondary-fixed-variant": "#39475f",
+                        "surface-variant": "#273647",
+                        "surface-bright": "#2c3a4c",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "tertiary-fixed": "#dce1fb",
+                        "primary-container": "#c5a059",
+                        "tertiary-fixed-dim": "#c0c6de",
+                        "outline-variant": "#4e4639",
+                        "primary": "#e9c176",
+                        "on-surface-variant": "#d1c5b4",
+                        "primary-fixed-dim": "#e9c176",
+                        "surface-dim": "#051424",
+                        "secondary-fixed": "#d6e3ff",
+                        "on-secondary": "#233148",
+                        "surface-container-highest": "#273647",
+                        "surface": "#051424",
+                        "secondary-fixed-dim": "#b9c7e4",
+                        "surface-container": "#122131",
+                        "on-tertiary-container": "#343a4e",
+                        "surface-tint": "#e9c176",
+                        "surface-container-high": "#1c2b3c",
+                        "surface-container-low": "#0d1c2d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "container-max": "1440px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "sidebar-width": "280px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "display-md": ["Newsreader"],
+                        "table-data": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-sm": ["Newsreader"],
+                        "display-lg": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-md": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "table-data": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(10, 25, 47, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+        .gold-border-glow:focus {
+            outline: none;
+            border-color: #C5A059;
+            box-shadow: 0 0 8px rgba(197, 160, 89, 0.3);
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 left-0 flex justify-between items-center px-8 h-20 bg-slate-950/60 backdrop-blur-xl z-40 border-b border-[#C5A059]/20 shadow-none">
+<div class="text-2xl font-serif tracking-widest text-[#C5A059] uppercase">Medallion Theatre</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-slate-400">
+<span class="material-symbols-outlined cursor-pointer hover:text-[#C5A059] transition-colors duration-300" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-[#C5A059] transition-colors duration-300" data-icon="history">history</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-[#C5A059] transition-colors duration-300" data-icon="help">help</span>
+</div>
+<div class="h-6 w-px bg-[#C5A059]/20"></div>
+<button class="text-slate-400 hover:text-[#C5A059] transition-colors duration-300 font-serif text-sm">Support</button>
+<div class="w-10 h-10 rounded-full border border-[#C5A059]/30 overflow-hidden">
+<img alt="Admin Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a mature theatre executive with a poised expression, set against a dark, moody background with subtle warm lighting that highlights facial features. The aesthetic is sophisticated and high-end, mirroring the minimalist luxury of an elite performance venue's administrative offices. Deep shadows and soft, golden-hued backlighting create a cinematic and authoritative atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM_bwyGb-F0NMC1EUGhpFLT2ZhXQms_Hyu-zMY29FhJYdi1RchJhOqJls6H6b8HCUpMD4oCWeyNSjYeLHvLuGP2O1weYHQjvRXh88_BCjSy4xZ3uaPVvCKTit2uRtA7G-EocEsyS-qyQOx9zCZorciBtEG2Zi56sQ80CvN0dFuivvq_gMo-KLEFbjKNaXuPFNIDh6_5EtapWGrfLwgXromQIM68cEL7H2JXOV22Du-QX0rRV0EcHT2gaTUnOAC85yFwC7qy00CuZd8"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full w-[280px] border-r border-[#C5A059]/30 bg-slate-950/80 backdrop-blur-2xl shadow-2xl shadow-black/50 z-50 flex flex-col py-8">
+<div class="px-8 mb-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 flex items-center justify-center border border-[#C5A059] rounded-lg">
+<span class="material-symbols-outlined text-[#C5A059]" data-icon="theater_comedy">theater_comedy</span>
+</div>
+<div>
+<h2 class="text-xl font-serif text-[#C5A059]">Medallion Admin</h2>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-label-caps">Elite Venue Management</p>
+</div>
+</div>
+</div>
+<div class="flex-1 space-y-1 overflow-y-auto">
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-serif text-sm antialiased">Dashboard</span>
+</a>
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-serif text-sm antialiased">Patrons</span>
+</a>
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+<span class="font-serif text-sm antialiased">Reservations</span>
+</a>
+<a class="bg-gradient-to-r from-[#C5A059]/10 to-transparent text-[#C5A059] border-l-2 border-[#C5A059] px-6 py-4 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined" data-icon="theater_comedy">theater_comedy</span>
+<span class="font-serif text-sm antialiased">Productions</span>
+</a>
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="event_seat">event_seat</span>
+<span class="font-serif text-sm antialiased">Performances</span>
+</a>
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-serif text-sm antialiased">Reports</span>
+</a>
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-serif text-sm antialiased">Settings</span>
+</a>
+</div>
+<div class="mt-auto px-6 py-4 space-y-4">
+<button class="w-full bg-[#C5A059] text-slate-950 font-medium py-3 rounded-lg hover:bg-primary transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl" data-icon="add">add</span>
+<span class="font-label-caps text-xs">New Production</span>
+</button>
+<div class="h-px bg-[#C5A059]/20 w-full"></div>
+<a class="text-slate-500 flex items-center gap-4 hover:text-error transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-serif text-sm">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="ml-[280px] pt-20 p-md xl:p-xl flex flex-col min-h-screen">
+<div class="max-w-4xl mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-lg flex justify-between items-end">
+<div>
+<nav class="flex mb-2 text-label-caps text-slate-500 gap-2">
+<span class="hover:text-[#C5A059] cursor-pointer">Productions</span>
+<span>/</span>
+<span class="text-[#C5A059]">New Production</span>
+</nav>
+<h1 class="font-display-md text-display-md text-[#C5A059]">Add New Production</h1>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2 border border-[#C5A059]/50 text-[#C5A059] hover:bg-[#C5A059]/10 transition-all font-label-caps text-xs">Discard</button>
+<button class="px-6 py-2 bg-[#C5A059] text-slate-950 hover:bg-primary transition-all font-label-caps text-xs">Save Production</button>
+</div>
+</div>
+<!-- Form Content -->
+<div class="grid grid-cols-12 gap-md">
+<!-- Main Form Card -->
+<div class="col-span-12 lg:col-span-8 glass-panel p-lg rounded-xl">
+<form class="space-y-md">
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-[#C5A059]">Production Name</label>
+<input class="w-full bg-surface-container-low border-b border-[#C5A059]/30 py-3 px-1 text-on-surface focus:border-[#C5A059] focus:ring-0 transition-all gold-border-glow placeholder:text-slate-600 font-body-md" placeholder="e.g. The Phantom of the Opera" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-[#C5A059]">Type</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low border-b border-[#C5A059]/30 py-3 px-1 text-on-surface focus:border-[#C5A059] focus:ring-0 appearance-none transition-all gold-border-glow font-body-md">
+<option>Musical</option>
+<option>Opera</option>
+<option>Play</option>
+<option>Ballet</option>
+<option>Concert</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-3 text-slate-500 pointer-events-none" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-[#C5A059]">Duration (HH:MM)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-b border-[#C5A059]/30 py-3 px-1 text-on-surface focus:border-[#C5A059] focus:ring-0 transition-all gold-border-glow placeholder:text-slate-600 font-body-md" placeholder="02:30" type="text"/>
+<span class="material-symbols-outlined absolute right-2 top-3 text-slate-500 pointer-events-none" data-icon="schedule">schedule</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-[#C5A059]">Description</label>
+<textarea class="w-full bg-surface-container-low border border-[#C5A059]/30 p-4 text-on-surface focus:border-[#C5A059] focus:ring-0 transition-all gold-border-glow placeholder:text-slate-600 font-body-md rounded-lg resize-none" placeholder="Provide a detailed synopsis of the production..." rows="6"></textarea>
+</div>
+</form>
+</div>
+<!-- Sidebar Metadata -->
+<div class="col-span-12 lg:col-span-4 space-y-md">
+<!-- Status Card -->
+<div class="glass-panel p-md rounded-xl">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-label-caps text-xs text-[#C5A059]">Production Status</h3>
+<div class="flex items-center gap-3">
+<span class="text-xs text-slate-500 font-body-sm">Active</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-slate-200 after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#C5A059]"></div>
+</label>
+</div>
+</div>
+<p class="text-xs text-slate-400 font-body-sm leading-relaxed">
+                            Inactive productions will be hidden from public reservations and performance scheduling.
+                        </p>
+</div>
+<!-- Media Assets Card -->
+<div class="glass-panel p-md rounded-xl space-y-4">
+<h3 class="font-label-caps text-xs text-[#C5A059]">Promotional Asset</h3>
+<div class="aspect-[3/4] relative group rounded-lg overflow-hidden border border-[#C5A059]/20 bg-slate-900/50">
+<img alt="Production Poster Placeholder" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity" data-alt="A theatrical stage bathed in dramatic dark blue and gold lighting, featuring a single empty velvet chair in the spotlight. Intricate golden moldings of an old opera house frame the scene, creating a sense of luxury and anticipation. The lighting is high-contrast, with long shadows and shimmering particles in the air, embodying a minimalist luxury aesthetic for a prestige performing arts venue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBylQuW5_LILcMudRfpk7C6YbAN0FcJE0NcB6osrh0tEP8MWRWsR14GSF1tOanW17rgYm0SkfUtOodXYy9C8KE6s8N6p_8G9ou4JPfr_BalqFhkRuHseAUrr4AOtZNW9MRpIoa1oQy34b7wfrLtU0hktuIQ-aee4IQ4S_CUTZeEZeIfW4MOU5_wWOWaGiYx-iCTVMLvra-1lGFO7eb5JVDXFXkHXnubQ8-LZL0Nklq3AKDOY41DpfDlUfvhAE2ZrxUoZdAgxAlJSsDj"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-[#C5A059] mb-2" data-icon="add_a_photo">add_a_photo</span>
+<span class="font-label-caps text-[10px] text-on-surface">Replace Key Art</span>
+</div>
+</div>
+</div>
+<!-- Helper Tip -->
+<div class="p-md bg-[#C5A059]/5 border-l-2 border-[#C5A059] rounded-r-lg">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#C5A059] text-sm" data-icon="info">info</span>
+<p class="text-xs text-slate-300 font-body-sm italic">
+                                "High-resolution posters ensure a premium customer experience in the booking portal."
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Productions Bento Preview -->
+<div class="mt-xl">
+<h2 class="font-headline-sm text-headline-sm text-[#C5A059] mb-md">Related Productions</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="glass-panel p-md rounded-xl flex flex-col gap-3 group cursor-pointer hover:border-[#C5A059]/60 transition-all">
+<div class="h-32 rounded-lg overflow-hidden">
+<img alt="Violinist Performance" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A close-up shot of a violinist's hands and instrument during a performance under warm golden stage lighting. The background is a dark, out-of-focus orchestra pit, emphasizing the rich wood textures and the glowing highlights of the violin. The mood is intimate and focused, capturing the precision and luxury of a world-class musical production in a grand theater." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5BjsWv5RD0QYMO0b9byWVrBDRvWHNm4wkm04Tol6xzUlj1TNoOAFnM2Agcr8PKjHEI_0oN1nHO5e7SxnkpSdx8GQ6EeB4yytDetpMSZEQVpd2kJ6u5vZz77HywrhU9jsXL1qWXqzrumVP5oOGUkw4YRKGsG3M6sJpmEROmZNJJb7Nv18wi2IZfazBSOCt5ULDdU8Pvby5GpMFOmwJr5gZVdOHZaKeL3u1xJnkGubFRSHVyN3ISdqXsUNX-4LatSOXUOtudtFkaJAz"/>
+</div>
+<div>
+<p class="text-[10px] text-[#C5A059] font-label-caps mb-1">Musical</p>
+<h4 class="font-serif text-lg">Swan Lake</h4>
+</div>
+</div>
+<div class="glass-panel p-md rounded-xl flex flex-col gap-3 group cursor-pointer hover:border-[#C5A059]/60 transition-all">
+<div class="h-32 rounded-lg overflow-hidden">
+<img alt="Theatre Mask" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An ornate, white ceramic Venetian mask rests on a dark velvet cloth, illuminated by a sharp, warm spotlight that casts dramatic shadows. The mask's details are exquisite, reflecting a sense of mystery and theatrical tradition. The surrounding environment is pitch black, creating a high-contrast, luxury aesthetic that speaks to elite theater administration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDotUykkxXwWQJse2aK3v-BZgmEjAH2spR2E2ascwUJiOnbsq8yTOIski0F8RzFCmunKOTmw-MSqL61fQqWCacRo6hPUtx9G_iKJZhjx18uBGWofdj0zJJ9mU3H0qEV6bxArIxVf98fMqMVe5YpybhsKnP0i66g4pbBQEdf88ZNeuBUWRXHGnOT_1CCz2mTnuvQ0j0k2qoA-h1KzMJXCWXVzMQFDg9dUO9Kvfx2PPjKlvaVqrpR2oJMQNe_pRubyG6uJBiBdiYWii_2"/>
+</div>
+<div>
+<p class="text-[10px] text-[#C5A059] font-label-caps mb-1">Play</p>
+<h4 class="font-serif text-lg">Macbeth</h4>
+</div>
+</div>
+<div class="glass-panel p-md rounded-xl flex flex-col gap-3 group cursor-pointer hover:border-[#C5A059]/60 transition-all">
+<div class="h-32 rounded-lg overflow-hidden">
+<img alt="Stage Lighting" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A row of professional theatrical stage lights silhouetted against a deep indigo and magenta wash. Wisps of atmospheric fog catch the beams, creating volumetric light paths. The composition is artistic and minimalist, representing the technical excellence and high-stakes environment of a premium performance venue's lighting design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRhUQXgvgHx7kmXm_5p1znwiVS5vKenx7-VHbGXkIF_Cue43uxvQ0zsURPiWZme9w_4-JviOCihTc5yw0N0Au5I-RUg08fsxiA2LQVjqff2NSGnUKYtWAckHZFw_gKcntL2Y-kaDKID6nHJjz8ereqdhO94cggkFm1-i62IY-2ajAOVyn731sN9BT9rWKxgzqfOUD_kCXN7WWRkNnyQcGWb37Mu7YaNtzKDT_oQrG3hdaSHbb4mmjMzmOsK-XQoGplr4IU4p7u-sL8"/>
+</div>
+<div>
+<p class="text-[10px] text-[#C5A059] font-label-caps mb-1">Opera</p>
+<h4 class="font-serif text-lg">La Traviata</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

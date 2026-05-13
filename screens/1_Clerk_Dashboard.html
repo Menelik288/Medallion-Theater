@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body {
+            background-color: #051424;
+            color: #d4e4fa;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#261900",
+                        "primary-fixed": "#ffdea5",
+                        "tertiary-container": "#9fa4bc",
+                        "on-background": "#d4e4fa",
+                        "inverse-surface": "#d4e4fa",
+                        "outline": "#9a8f80",
+                        "background": "#051424",
+                        "surface-container-lowest": "#010f1f",
+                        "on-secondary-fixed": "#0d1c32",
+                        "on-surface": "#d4e4fa",
+                        "error": "#ffb4ab",
+                        "on-primary": "#412d00",
+                        "on-tertiary": "#2a3043",
+                        "on-error": "#690005",
+                        "secondary-container": "#3c4962",
+                        "inverse-primary": "#775a19",
+                        "on-tertiary-fixed-variant": "#40465a",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#abb9d6",
+                        "inverse-on-surface": "#233143",
+                        "tertiary": "#c0c6de",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#151b2d",
+                        "secondary": "#b9c7e4",
+                        "on-primary-container": "#4e3700",
+                        "on-secondary-fixed-variant": "#39475f",
+                        "surface-variant": "#273647",
+                        "surface-bright": "#2c3a4c",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "tertiary-fixed": "#dce1fb",
+                        "primary-container": "#c5a059",
+                        "tertiary-fixed-dim": "#c0c6de",
+                        "outline-variant": "#4e4639",
+                        "primary": "#e9c176",
+                        "on-surface-variant": "#d1c5b4",
+                        "primary-fixed-dim": "#e9c176",
+                        "surface-dim": "#051424",
+                        "secondary-fixed": "#d6e3ff",
+                        "on-secondary": "#233148",
+                        "surface-container-highest": "#273647",
+                        "surface": "#051424",
+                        "secondary-fixed-dim": "#b9c7e4",
+                        "surface-container": "#122131",
+                        "on-tertiary-container": "#343a4e",
+                        "surface-tint": "#e9c176",
+                        "surface-container-high": "#1c2b3c",
+                        "surface-container-low": "#0d1c2d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "container-max": "1440px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "sidebar-width": "280px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "display-md": ["Newsreader"],
+                        "table-data": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-sm": ["Newsreader"],
+                        "display-lg": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-md": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "table-data": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 right-0 left-0 flex justify-between items-center px-8 h-20 bg-slate-950/60 backdrop-blur-xl z-40 border-b border-[#C5A059]/20 shadow-none">
+<div class="text-2xl font-serif tracking-widest text-[#C5A059] uppercase">Medallion Theatre</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center bg-surface-container px-4 py-2 rounded-lg border border-outline-variant/30">
+<span class="material-symbols-outlined text-[#C5A059] mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-64 text-on-surface placeholder-outline" placeholder="Search reservations..." type="text"/>
+</div>
+<div class="flex items-center gap-4 text-slate-400">
+<span class="material-symbols-outlined cursor-pointer hover:text-[#C5A059] transition-colors">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-[#C5A059] transition-colors">history</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-[#C5A059] transition-colors">help</span>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-[#C5A059]/50">
+<img alt="Admin Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a refined theatre administrator with a clean-cut look, set against a dark, dramatic background. The lighting is reminiscent of high-end cinematic stage lighting with subtle gold rim lights. The mood is sophisticated and exclusive, perfectly matching the deep navy and metallic gold palette of a prestigious luxury venue management system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWR-OZxA_v3r04lKmDJIjODYMIdT9HmDFVeCpCAxikOqjQQULv5clLcpDAuOliHuFh9Z7nXKW4a2MjiUqQRCgP0bYUgOeyfPtZtof9Jc4c_j3UN7f63192pfE1xoVtHcdYelmkH_OuV5ixLkaETK6HlVQVrEaulnjptWoxPzFd1aIH2N0No6YAty-glCXxLpooF8bR0GKi6nR5qsb4OaqRROyfwVrM2bq1MHkdrEbZlf9nhGBSqzbjQyv6MctJZ1CZIIfxugKisKWI"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Side Navigation Shell -->
+<aside class="fixed left-0 top-0 h-full w-[280px] bg-slate-950/80 backdrop-blur-2xl border-r border-[#C5A059]/30 shadow-2xl shadow-black/50 z-50">
+<div class="flex flex-col h-full py-8">
+<div class="px-8 mb-10">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-[#C5A059] text-3xl">theater_comedy</span>
+<h2 class="text-xl font-serif text-[#C5A059]">Medallion Admin</h2>
+</div>
+<p class="text-xs font-serif uppercase tracking-widest text-slate-500">Elite Venue Management</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="bg-gradient-to-r from-[#C5A059]/10 to-transparent text-[#C5A059] border-l-2 border-[#C5A059] px-6 py-4 flex items-center gap-4 font-serif text-sm antialiased hover:translate-x-1 transition-all duration-300 cursor-pointer" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 font-serif text-sm antialiased hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1 cursor-pointer" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Patrons</span>
+</a>
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 font-serif text-sm antialiased hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1 cursor-pointer" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<span>Reservations</span>
+</a>
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 font-serif text-sm antialiased hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1 cursor-pointer" href="#">
+<span class="material-symbols-outlined">theater_comedy</span>
+<span>Productions</span>
+</a>
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 font-serif text-sm antialiased hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1 cursor-pointer" href="#">
+<span class="material-symbols-outlined">event_seat</span>
+<span>Performances</span>
+</a>
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 font-serif text-sm antialiased hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1 cursor-pointer" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span>Reports</span>
+</a>
+<a class="text-slate-500 px-6 py-4 flex items-center gap-4 font-serif text-sm antialiased hover:bg-[#C5A059]/5 hover:text-[#C5A059] transition-all duration-200 hover:translate-x-1 cursor-pointer" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<div class="mt-6 pt-6 border-t border-[#C5A059]/20">
+<a class="text-slate-500 px-0 py-2 flex items-center gap-4 font-serif text-sm antialiased hover:text-error transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[280px] pt-24 px-8 pb-12">
+<!-- Header Section -->
+<header class="mb-12 flex justify-between items-end">
+<div>
+<h1 class="font-display-lg text-display-lg text-[#C5A059] mb-2">Clerk Dashboard</h1>
+<p class="font-body-lg text-body-lg text-slate-400 italic">Welcome back. The house is nearly full for tonight's opening.</p>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-[#C5A059] mb-1">CURRENT SHOWTIME</p>
+<p class="font-display-md text-headline-sm text-on-surface">20:00 — The Gilded Cage</p>
+</div>
+</header>
+<!-- Bento Grid Quick Stats -->
+<div class="grid grid-cols-12 gap-md mb-xl">
+<div class="col-span-12 md:col-span-4 bg-slate-950/40 backdrop-blur-xl border border-[#C5A059]/20 p-md rounded-xl flex flex-col justify-between h-48 group hover:border-[#C5A059]/50 transition-all">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-[#C5A059] bg-[#C5A059]/10 p-3 rounded-full">confirmation_number</span>
+<span class="text-green-500 text-xs font-bold">+12% vs last show</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-slate-500 uppercase">Today's Tickets Sold</p>
+<p class="font-display-md text-display-md text-on-surface">412</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-slate-950/40 backdrop-blur-xl border border-[#C5A059]/20 p-md rounded-xl flex flex-col justify-between h-48 group hover:border-[#C5A059]/50 transition-all">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-[#C5A059] bg-[#C5A059]/10 p-3 rounded-full">payments</span>
+<span class="text-green-500 text-xs font-bold">+8% today</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-slate-500 uppercase">Revenue</p>
+<p class="font-display-md text-display-md text-on-surface">$24,850.00</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-slate-950/40 backdrop-blur-xl border border-[#C5A059]/20 p-md rounded-xl flex flex-col justify-between h-48 group hover:border-[#C5A059]/50 transition-all">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-[#C5A059] bg-[#C5A059]/10 p-3 rounded-full">theater_comedy</span>
+<span class="text-[#C5A059] text-xs font-bold">3 Current</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-slate-500 uppercase">Active Productions</p>
+<p class="font-display-md text-display-md text-on-surface">12 <span class="text-body-sm text-slate-500">Scheduled</span></p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-md">
+<!-- Reservations List Table -->
+<section class="col-span-12 lg:col-span-9 bg-slate-950/40 backdrop-blur-xl border border-[#C5A059]/20 rounded-xl overflow-hidden shadow-2xl">
+<div class="p-6 border-b border-[#C5A059]/10 flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-[#C5A059]">Recent Reservations</h3>
+<button class="text-[#C5A059] font-label-caps text-xs flex items-center gap-2 hover:opacity-70">
+                        VIEW ALL <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container/30 border-b border-[#C5A059]/10">
+<th class="p-6 font-label-caps text-label-caps text-[#C5A059] uppercase tracking-widest">Patron Name</th>
+<th class="p-6 font-label-caps text-label-caps text-[#C5A059] uppercase tracking-widest">Production</th>
+<th class="p-6 font-label-caps text-label-caps text-[#C5A059] uppercase tracking-widest">Seats</th>
+<th class="p-6 font-label-caps text-label-caps text-[#C5A059] uppercase tracking-widest">Status</th>
+<th class="p-6 font-label-caps text-label-caps text-[#C5A059] uppercase tracking-widest text-right">Total</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#C5A059]/5">
+<tr class="hover:bg-[#C5A059]/5 transition-colors cursor-pointer group">
+<td class="p-6">
+<div class="font-body-md text-on-surface group-hover:text-[#C5A059]">Julianne Sterling</div>
+<div class="text-xs text-slate-500">Member #1092</div>
+</td>
+<td class="p-6 text-body-md text-slate-300">The Gilded Cage</td>
+<td class="p-6 text-body-md text-slate-300">Box A, S12-14</td>
+<td class="p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-500 text-[10px] font-bold uppercase tracking-widest border border-green-500/20">Confirmed</span>
+</td>
+<td class="p-6 text-right font-table-data text-[#C5A059]">$450.00</td>
+</tr>
+<tr class="hover:bg-[#C5A059]/5 transition-colors cursor-pointer group">
+<td class="p-6">
+<div class="font-body-md text-on-surface group-hover:text-[#C5A059]">Arthur Penhaligon</div>
+<div class="text-xs text-slate-500">First-time Guest</div>
+</td>
+<td class="p-6 text-body-md text-slate-300">Swan Lake</td>
+<td class="p-6 text-body-md text-slate-300">Orchestra R4, S1-2</td>
+<td class="p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-[10px] font-bold uppercase tracking-widest border border-blue-500/20">Selected</span>
+</td>
+<td class="p-6 text-right font-table-data text-[#C5A059]">$320.00</td>
+</tr>
+<tr class="hover:bg-[#C5A059]/5 transition-colors cursor-pointer group">
+<td class="p-6">
+<div class="font-body-md text-on-surface group-hover:text-[#C5A059]">Eleanor Rigby</div>
+<div class="text-xs text-slate-500">Donor Tier</div>
+</td>
+<td class="p-6 text-body-md text-slate-300">The Gilded Cage</td>
+<td class="p-6 text-body-md text-slate-300">Loge C, S8</td>
+<td class="p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-[10px] font-bold uppercase tracking-widest border border-red-500/20">Reserved</span>
+</td>
+<td class="p-6 text-right font-table-data text-[#C5A059]">$125.00</td>
+</tr>
+<tr class="hover:bg-[#C5A059]/5 transition-colors cursor-pointer group">
+<td class="p-6">
+<div class="font-body-md text-on-surface group-hover:text-[#C5A059]">Maximilian Frost</div>
+<div class="text-xs text-slate-500">Member #4521</div>
+</td>
+<td class="p-6 text-body-md text-slate-300">Hamlet</td>
+<td class="p-6 text-body-md text-slate-300">Balcony L2, S15</td>
+<td class="p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-500 text-[10px] font-bold uppercase tracking-widest border border-green-500/20">Confirmed</span>
+</td>
+<td class="p-6 text-right font-table-data text-[#C5A059]">$85.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Sidebar Shortcuts -->
+<aside class="col-span-12 lg:col-span-3 space-y-md">
+<div class="bg-[#C5A059] text-on-primary-fixed p-6 rounded-xl shadow-xl shadow-primary-container/20 group cursor-pointer hover:bg-primary transition-all active:scale-[0.98]">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-3xl">add_circle</span>
+<h4 class="font-headline-sm text-xl font-bold">New Reservation</h4>
+</div>
+<p class="text-xs font-bold uppercase tracking-widest opacity-80">Quick Booking Flow</p>
+</div>
+<div class="bg-slate-950/40 backdrop-blur-xl border border-[#C5A059]/20 p-6 rounded-xl hover:border-[#C5A059]/50 transition-all cursor-pointer group">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-[#C5A059]">person_search</span>
+<h4 class="font-headline-sm text-xl text-on-surface group-hover:text-[#C5A059]">Search Patron</h4>
+</div>
+<p class="text-xs text-slate-500 font-label-caps uppercase tracking-widest">Access Profiles &amp; History</p>
+</div>
+<div class="bg-slate-950/40 backdrop-blur-xl border border-error/20 p-6 rounded-xl hover:border-error/50 transition-all cursor-pointer group">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-error">cancel</span>
+<h4 class="font-headline-sm text-xl text-on-surface group-hover:text-error">Cancel Ticket</h4>
+</div>
+<p class="text-xs text-slate-500 font-label-caps uppercase tracking-widest">Processing &amp; Refunds</p>
+</div>
+<!-- Venue Map Quick Access -->
+<div class="relative h-48 rounded-xl overflow-hidden border border-[#C5A059]/20 group cursor-pointer">
+<img alt="Seating Chart Overview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An artistic, high-contrast photograph of an empty grand theatre auditorium from the stage perspective. The seats are lush deep red velvet, and the gold-leaf detailing on the balconies is illuminated by soft, warm spotlighting. The atmospheric lighting creates deep shadows and shimmering highlights, conveying a sense of luxury and exclusive anticipation for a world-class performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiFiaf-wmjnWj01f2bofn_eG-l94JPo0LBW9z1ddkJwsrgJ2RVQX6U_9BA277oFo25gY_hhNcFEASKQQy3x-QvedgwvsuGy_UEMmA9-lxCXnlZR6CYLBiTTnSyQDp6BhYfuPN7pHFVvJalVFrMKVJ05QgXxJ83q5uyRarjEikzTUdJNOh5kdqnTpnSogUcDcdQzW5jkX_Bf5RgeBurBqcm8BIDH0JWIla_Kz2OIg-h85XgrF7czFJxGC0Qt9MfF8sZnw_RMg9N5Ysr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent flex flex-col justify-end p-4">
+<p class="font-label-caps text-[10px] text-[#C5A059] uppercase tracking-widest mb-1">Interactive Seating</p>
+<h5 class="font-headline-sm text-lg text-white">Main Hall Map</h5>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</body></html>

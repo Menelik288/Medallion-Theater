@@ -1,0 +1,158 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/container-queries";
+
+@theme {
+  --color-on-primary-fixed: #261900;
+  --color-primary-fixed: #ffdea5;
+  --color-tertiary-container: #9fa4bc;
+  --color-on-background: #d4e4fa;
+  --color-inverse-surface: #d4e4fa;
+  --color-outline: #9a8f80;
+  --color-background: #051424;
+  --color-surface-container-lowest: #010f1f;
+  --color-on-secondary-fixed: #0d1c32;
+  --color-on-surface: #d4e4fa;
+  --color-error: #ffb4ab;
+  --color-on-primary: #412d00;
+  --color-on-tertiary: #2a3043;
+  --color-on-error: #690005;
+  --color-secondary-container: #3c4962;
+  --color-inverse-primary: #775a19;
+  --color-on-tertiary-fixed-variant: #40465a;
+  --color-on-error-container: #ffdad6;
+  --color-on-secondary-container: #abb9d6;
+  --color-inverse-on-surface: #233143;
+  --color-tertiary: #c0c6de;
+  --color-error-container: #93000a;
+  --color-on-tertiary-fixed: #151b2d;
+  --color-secondary: #b9c7e4;
+  --color-on-primary-container: #4e3700;
+  --color-on-secondary-fixed-variant: #39475f;
+  --color-surface-variant: #273647;
+  --color-surface-bright: #2c3a4c;
+  --color-on-primary-fixed-variant: #5d4201;
+  --color-tertiary-fixed: #dce1fb;
+  --color-primary-container: #c5a059;
+  --color-tertiary-fixed-dim: #c0c6de;
+  --color-outline-variant: #4e4639;
+  --color-primary: #e9c176;
+  --color-on-surface-variant: #d1c5b4;
+  --color-primary-fixed-dim: #e9c176;
+  --color-surface-dim: #051424;
+  --color-secondary-fixed: #d6e3ff;
+  --color-on-secondary: #233148;
+  --color-surface-container-highest: #273647;
+  --color-surface: #051424;
+  --color-secondary-fixed-dim: #b9c7e4;
+  --color-surface-container: #122131;
+  --color-on-tertiary-container: #343a4e;
+  --color-surface-tint: #e9c176;
+  --color-surface-container-high: #1c2b3c;
+  --color-surface-container-low: #0d1c2d;
+
+  --spacing-lg: 40px;
+  --spacing-container-max: 1440px;
+  --spacing-base: 8px;
+  --spacing-sm: 12px;
+  --spacing-sidebar-width: 280px;
+  --spacing-xs: 4px;
+  --spacing-md: 24px;
+  --spacing-xl: 64px;
+
+  --font-serif: "Newsreader", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --font-display-md: "Newsreader";
+  --font-table-data: "Inter";
+  --font-body-lg: "Inter";
+  --font-body-sm: "Inter";
+  --font-headline-sm: "Newsreader";
+  --font-display-lg: "Newsreader";
+  --font-body-md: "Inter";
+  --font-label-caps: "Inter";
+
+  --text-display-md: 36px;
+  --text-display-md--line-height: 1.2;
+  --text-display-md--letter-spacing: -0.01em;
+  --text-display-md--font-weight: 500;
+
+  --text-table-data: 14px;
+  --text-table-data--line-height: 1.4;
+  --text-table-data--font-weight: 500;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 1.5;
+  --text-body-sm--font-weight: 400;
+
+  --text-headline-sm: 24px;
+  --text-headline-sm--line-height: 1.3;
+  --text-headline-sm--font-weight: 500;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 600;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.5;
+  --text-body-md--font-weight: 400;
+
+  --text-label-caps: 12px;
+  --text-label-caps--line-height: 1;
+  --text-label-caps--letter-spacing: 0.1em;
+  --text-label-caps--font-weight: 600;
+
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface antialiased;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  33% { transform: translateY(-30px) translateX(15px); }
+  66% { transform: translateY(15px) translateX(-15px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); filter: brightness(1); }
+  50% { opacity: 1; transform: scale(1.2); filter: brightness(2); }
+}
+
+@keyframes shooting-star {
+  0% { transform: translate(-100%, -100%) rotate(45deg); opacity: 0; }
+  10% { opacity: 1; }
+  30% { transform: translate(200%, 200%) rotate(45deg); opacity: 0; }
+  100% { transform: translate(200%, 200%) rotate(45deg); opacity: 0; }
+}
+
+.animate-float {
+  animation: float 10s infinite ease-in-out;
+}
+
+.animate-twinkle {
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+.animate-shooting-star {
+  animation: shooting-star 4s linear infinite;
+}
+
+body, button, a, input, select, textarea, .cursor-pointer {
+  cursor: none !important;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  font-size: 20px;
+}

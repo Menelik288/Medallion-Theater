@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Medallion Theatre</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6-72,400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#261900",
+                        "primary-fixed": "#ffdea5",
+                        "tertiary-container": "#9fa4bc",
+                        "on-background": "#d4e4fa",
+                        "inverse-surface": "#d4e4fa",
+                        "outline": "#9a8f80",
+                        "background": "#051424",
+                        "surface-container-lowest": "#010f1f",
+                        "on-secondary-fixed": "#0d1c32",
+                        "on-surface": "#d4e4fa",
+                        "error": "#ffb4ab",
+                        "on-primary": "#412d00",
+                        "on-tertiary": "#2a3043",
+                        "on-error": "#690005",
+                        "secondary-container": "#3c4962",
+                        "inverse-primary": "#775a19",
+                        "on-tertiary-fixed-variant": "#40465a",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#abb9d6",
+                        "inverse-on-surface": "#233143",
+                        "tertiary": "#c0c6de",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#151b2d",
+                        "secondary": "#b9c7e4",
+                        "on-primary-container": "#4e3700",
+                        "on-secondary-fixed-variant": "#39475f",
+                        "surface-variant": "#273647",
+                        "surface-bright": "#2c3a4c",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "tertiary-fixed": "#dce1fb",
+                        "primary-container": "#c5a059",
+                        "tertiary-fixed-dim": "#c0c6de",
+                        "outline-variant": "#4e4639",
+                        "primary": "#e9c176",
+                        "on-surface-variant": "#d1c5b4",
+                        "primary-fixed-dim": "#e9c176",
+                        "surface-dim": "#051424",
+                        "secondary-fixed": "#d6e3ff",
+                        "on-secondary": "#233148",
+                        "surface-container-highest": "#273647",
+                        "surface": "#051424",
+                        "secondary-fixed-dim": "#b9c7e4",
+                        "surface-container": "#122131",
+                        "on-tertiary-container": "#343a4e",
+                        "surface-tint": "#e9c176",
+                        "surface-container-high": "#1c2b3c",
+                        "surface-container-low": "#0d1c2d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "container-max": "1440px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "sidebar-width": "280px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "display-md": ["Newsreader"],
+                        "table-data": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-sm": ["Newsreader"],
+                        "display-lg": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-md": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "table-data": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(10, 25, 47, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+        .gold-gradient-btn {
+            background: linear-gradient(135deg, #e9c176 0%, #c5a059 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen relative overflow-hidden flex flex-col">
+<!-- Cinematic Background -->
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover opacity-30 grayscale blur-sm" data-alt="A grand, cinematic interior of a luxury theatre auditorium at dusk. Rows of deep crimson velvet seats are bathed in soft, amber stage lighting that casts long, dramatic shadows. The ornate gold-leaf molding on the balcony levels shimmers under the dim, warm glow. The atmosphere is one of exclusive, quiet anticipation, captured with a shallow depth of field and high-end architectural photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkqdL3YVbitKFhngza5vj5dy3P-JboIWCqFfvAG0K4XUF9iaqdRf23IcMhZGDKyVeU1-Zkhk6SY2JMNFLCw8SYC0rLmRFrWlQY1oQvDu7PfB4zVDqvEbS6PtoyTWs5siKH9hcB4m2ASbT9NsbB7CytisE7AxQpKRqnGAkysUzVekT6SKGbfR5sALx5sYIBGWWnCnQaQInMeTdonC0nWJCAhaJeqpxd40UYOYe-_siysSiFPxS965ykGjxw3E9hpmKFJkXQfpe24fmr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background"></div>
+</div>
+<!-- Top Branding Anchor (Suppressed Nav Shell as per Transactional Rule) -->
+<header class="fixed top-0 right-0 left-0 flex justify-center items-center px-8 h-24 z-50">
+<div class="text-2xl font-serif tracking-widest text-primary uppercase">Medallion Theatre</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center p-md relative z-10">
+<div class="w-full max-w-md">
+<!-- Login Card -->
+<div class="glass-panel rounded-lg shadow-2xl shadow-black/80 overflow-hidden">
+<div class="p-lg md:p-xl space-y-xl">
+<!-- Header -->
+<div class="text-center space-y-sm">
+<div class="flex justify-center mb-base">
+<img alt="Medallion Theatre Logo" class="w-[120px] h-auto mx-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ugcAy16CwXgJYpFWhhwPwdSi08MFh9lsZGsa3_E6lVOVK-OXMaFynXpFH3yJmJC_KoBZOyncNqFDlTtBrPnqFAlWXIWIv-Q6IkFLnvifD95d1e0sj7hFgvcYitnKrZ7awhrap8kbt9OGnqWm-fCFbQrTumydbxHKopV6GQ7nW4u9g9C6zMWeExXbbPRXnrS9EkYKTk-OCmuWBoY4mJdk-nOarFapBDW34X93d-k0lWNBTBa19Df-___STip_-lipgUBaxWX5gHPtQ"/>
+</div>
+<h1 class="font-display-md text-display-md text-primary-fixed">Welcome Back</h1>
+<p class="font-body-sm text-body-sm text-outline">Access the Elite Venue Management Suite</p>
+</div>
+<!-- Form -->
+<form class="space-y-lg">
+<!-- Username -->
+<div class="space-y-xs group">
+<label class="font-label-caps text-label-caps text-primary uppercase block" for="username">Username</label>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-sm px-0 text-on-surface placeholder:text-surface-variant focus:ring-0 focus:border-primary transition-all duration-300 font-body-md" id="username" name="username" placeholder="administrator" type="text"/>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-outline-variant group-focus-within:text-primary transition-colors">person</span>
+</div>
+</div>
+<!-- Password -->
+<div class="space-y-xs group">
+<div class="flex justify-between items-center">
+<label class="font-label-caps text-label-caps text-primary uppercase block" for="password">Password</label>
+<a class="font-label-caps text-label-caps text-outline hover:text-primary transition-colors duration-200" href="#">Forgot?</a>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-sm px-0 text-on-surface placeholder:text-surface-variant focus:ring-0 focus:border-primary transition-all duration-300 font-body-md" id="password" name="password" placeholder="••••••••" type="password"/>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-outline-variant group-focus-within:text-primary transition-colors">lock</span>
+</div>
+</div>
+<!-- Sign In Button -->
+<div class="pt-base">
+<button class="gold-gradient-btn w-full py-md rounded-lg font-body-md font-semibold text-on-primary-fixed shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer" type="submit">
+                                SIGN IN TO CONSOLE
+                            </button>
+</div>
+</form>
+<!-- Secondary Options -->
+<div class="pt-lg border-t border-outline-variant/30 text-center">
+<p class="font-body-sm text-body-sm text-outline">
+                            Authorized personnel only. For support, contact 
+                            <a class="text-primary hover:underline transition-all" href="#">Venue Operations</a>.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Footer Meta -->
+<div class="mt-lg flex justify-between items-center px-base">
+<div class="flex gap-md">
+<span class="font-label-caps text-[10px] text-surface-variant uppercase tracking-[0.2em]">Privacy Policy</span>
+<span class="font-label-caps text-[10px] text-surface-variant uppercase tracking-[0.2em]">Terms of Access</span>
+</div>
+<div class="flex items-center gap-xs text-outline-variant">
+<span class="material-symbols-outlined text-sm">shield_person</span>
+<span class="font-label-caps text-[10px] uppercase tracking-[0.2em]">Secure Session</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Visual Accents (The Golden Threads) -->
+<div class="fixed top-0 left-0 w-1/4 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+<div class="fixed bottom-0 right-0 w-1/4 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+<div class="fixed top-0 left-0 h-1/4 w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent"></div>
+<div class="fixed bottom-0 right-0 h-1/4 w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent"></div>
+</body></html>

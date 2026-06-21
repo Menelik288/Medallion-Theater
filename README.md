@@ -5,6 +5,18 @@ A modern, full-stack theater management and ticketing system built to streamline
 ### 🌐 Live Demo
 **[https://medallion-theater-ewel0cjyu-menelik.vercel.app](https://medallion-theater-ewel0cjyu-menelik.vercel.app)**
 
+### 🔐 Demo Access
+To explore the different roles in the live demo, use these credentials:
+
+**Clerk Accounts:**
+- Username: `clerk1` | Password: `clerk123`
+- Username: `clerk2` | Password: `clerk123`
+- Username: `clerk3` | Password: `clerk123`
+- Username: `clerk4` | Password: `clerk123`
+
+**Manager Account:**
+- Username: `manager` | Password: `manager123`
+
 ---
 
 ## ✨ Features

@@ -1,16 +1,66 @@
-# React + Vite
+# Medallion Theater 🎭🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, full-stack theater management and ticketing system built to streamline operations and enhance the moviegoer experience.
 
-Currently, two official plugins are available:
+### 🌐 Live Demo
+**[https://medallion-theater-ewel0cjyu-menelik.vercel.app](https://medallion-theater-ewel0cjyu-menelik.vercel.app)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
+* **Ticketing System:** Seamless ticket booking, generation, and printing.
+* **Admin Dashboard:** Comprehensive analytics and charts for sales and operations.
+* **Authentication:** Secure user authentication and authorization using Supabase.
+* **Email Notifications:** Automated email confirmations via EmailJS.
+* **Export & Print:** Built-in PDF generation and print-ready tickets.
+* **Responsive UI:** A sleek, fully responsive interface powered by Tailwind CSS and Lucide React icons.
+* **State Management:** Fast and predictable state management using Zustand.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+* **Frontend:** React 19, Vite, Tailwind CSS
+* **Routing:** React Router DOM
+* **Database & Auth:** Supabase (PostgreSQL)
+* **State Management:** Zustand
+* **Charts & Analytics:** Recharts
+* **PDF & Printing:** jsPDF, html2canvas, React-to-Print
+* **Email Services:** EmailJS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Running Locally
+
+### Prerequisites
+- Node.js (v18+)
+- Supabase Project & Credentials
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Menelik288/Medallion-Theater.git
+   cd Medallion-Theater
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up Environment Variables:**
+   Create a `.env` or `.env.local` file in the root directory:
+   ```env
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 📄 License
+This project is for educational and portfolio purposes.

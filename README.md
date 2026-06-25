@@ -41,6 +41,52 @@ To explore the different roles in the live demo, use these credentials:
 
 ---
 
+📸 Web App Screenshots
+
+🏠 Home & Discovery
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/173c375e-7c0a-4672-ae3d-e15a49be8925" width="800"/>
+  <br/>
+  <img src="https://github.com/user-attachments/assets/4e9ee700-f913-4c7a-bc07-d32b571310b3" width="800"/>
+  <br/>
+  <img src="https://github.com/user-attachments/assets/aaf44be4-23d1-40fb-b7ba-718a3c40b2e2" width="800"/>
+</p>
+
+⸻
+
+🎬 Browsing & UI
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/95f97164-5a53-44a5-ad2b-51b45decfc0f" width="800"/>
+  <br/>
+  <img src="https://github.com/user-attachments/assets/c67fdb9d-15ba-4ac4-b67d-e64767e57901" width="800"/>
+</p>
+
+⸻
+
+⭐ Features & Interactions
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ce31ab2b-0cf5-4c4c-ab3f-5052ecc2e43f" width="800"/>
+  <br/>
+  <img src="https://github.com/user-attachments/assets/7c0895ec-5491-4f90-aa4d-06486a34eeb8" width="800"/>
+  <br/>
+  <img src="https://github.com/user-attachments/assets/fb1c3694-f630-45bb-83c3-aee7b247350c" width="800"/>
+</p>
+
+⸻
+
+⚙️ Additional Views
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/07449d69-ec65-4f37-9c09-1e6f3cdbd854" width="800"/>
+  <br/>
+  <img src="https://github.com/user-attachments/assets/0e81e7ec-04f5-49a1-bc1f-2c032d7af1d1" width="800"/>
+</p>
+
+---
+
 ## 🚀 Running Locally
 
 ### Prerequisites
